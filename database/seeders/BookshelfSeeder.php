@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Bookshelf;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class BookshelfSeeder extends Seeder
 {
@@ -13,17 +12,28 @@ class BookshelfSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('bookshelves')->insert([
-            'code' => 'R001',
-            'name' => 'Rak Buku A',
-        ]);
-        DB::table('bookshelves')->insert([
-            'code' => 'R002',
-            'name' => 'Rak Buku B',
-        ]);
-        DB::table('bookshelves')->insert([
-            'code' => 'R003',
-            'name' => 'Rak Buku C',
+
+        Bookshelf::insert([
+            [
+                'id' => '1',
+                'code' => '620', 'name' => 'Engineering',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'id' => '2',
+                'code' => '621',
+                'name' => 'Mechanical',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'id' => '3',
+                'code' => '622',
+                'name' => 'Topoographical',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
         ]);
     }
 }
