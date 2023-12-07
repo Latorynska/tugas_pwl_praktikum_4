@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             ProdiSeeder::class,
             MahasiswaSeeder::class,
             GeneralSeeder::class,
+            BookshelfSeeder::class,
         ]);
     }
 }

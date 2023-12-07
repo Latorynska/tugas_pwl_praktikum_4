@@ -8,15 +8,17 @@ use Maatwebsite\Excel\Concerns\FromArray;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 
-class BooksExport implements FromCollection, FromArray, WithHeadings, ShouldAutoSize
+// class BooksExport implements FromCollection, FromArray, WithHeadings, ShouldAutoSize
+class BooksExport implements FromArray, WithHeadings, ShouldAutoSize
+// class BooksExport implements FromCollection, WithHeadings, ShouldAutoSize
 {
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
-    {
-        return Book::all();
-    }
+    // public function collection()
+    // {
+    //     return Book::all();
+    // }
 
     public function array(): array
     {
@@ -30,7 +32,10 @@ class BooksExport implements FromCollection, FromArray, WithHeadings, ShouldAuto
             'Judul',
             'Penulis',
             'Tahun',
-            'Penerbit'
+            'Penerbit',
+            'Kota',
+            'Kuantitas',
+            'kode_rak'
         ];
     }
 }
