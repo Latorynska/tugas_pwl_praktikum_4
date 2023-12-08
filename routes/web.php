@@ -48,7 +48,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/books/print', [BookController::class, 'print'])->name('book.print');
     Route::get('/books/export', [BookController::class,'export'])->name('book.export');
     Route::post('/books/import', [BookController::class,'import'])->name('book.import');
-
+    Route::get('/bookshelf', [BookshelfController::class, 'index'])->name('bookshelf');
+    Route::get('/bookshelf/create', [BookshelfController::class, 'create'])->name('bookshelf.create');
+    Route::post('/bookshelf', [BookshelfController::class, 'store'])->name('bookshelf.store');
 });
 
 
